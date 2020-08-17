@@ -30,6 +30,6 @@ app.get("*", function(req, res){
     res.send("Page does not exist");
 });
 
-app.listen(3000, function(){
+app.listen(listen(process.env.PORT || 3000), function(){
     console.log("Server has started");
 }); 
