@@ -5,12 +5,12 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 app.get("/", function(req, res){
-    res.send("wow");
+    res.render("index")
 });
 
 app.get("*", function(req, res){
     res.status(404);
-    res.send("File does not exist");
+    res.send("Page does not exist");
 });
 
 app.listen(3000, function(){
